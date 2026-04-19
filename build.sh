@@ -12,21 +12,33 @@ MACOS_DIR="$APP_BUNDLE/Contents/MacOS"
 RESOURCES_DIR="$APP_BUNDLE/Contents/Resources"
 EXECUTABLE="$MACOS_DIR/$APP_NAME"
 SDK_PATH="$(xcrun --sdk macosx --show-sdk-path)"
+MODULE_CACHE_DIR="$BUILD_DIR/ModuleCache"
 
 rm -rf "$BUILD_DIR"
 mkdir -p "$MACOS_DIR"
 mkdir -p "$RESOURCES_DIR"
+mkdir -p "$MODULE_CACHE_DIR"
+
+if [[ ! -x naive ]]; then
+    echo "Missing executable ./naive" >&2
+    exit 1
+fi
 
 xcrun swiftc \
     -emit-executable \
     -o "$EXECUTABLE" \
     -sdk "$SDK_PATH" \
+    -module-cache-path "$MODULE_CACHE_DIR" \
     -target "arm64-apple-macosx$MIN_MACOS_VERSION" \
     -framework AppKit \
     -framework SwiftUI \
+    -framework UserNotifications \
     TuningForkApp.swift \
-    RoundedCorners.swift \
-    SafariDarkModeRefresh.swift
+    RoundedCornersService.swift \
+    SafariDarkModeRefreshService.swift \
+    NaiveProxyService.swift
+
+install -m 755 naive "$MACOS_DIR/naive"
 
 cat > "$APP_BUNDLE/Contents/Info.plist" <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
