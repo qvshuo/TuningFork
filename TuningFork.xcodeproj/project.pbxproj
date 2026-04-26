@@ -15,6 +15,7 @@
 		CCBA44FEEDAB4BC4B6179EE6 /* src/TuningForkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FC6D1EE8C47E9B1312C8E /* src/TuningForkApp.swift */; };
 		CE3E6923CC494D84B6D6BD00 /* src/RoundedCornersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6E6299D6842B5ABF41055 /* src/RoundedCornersService.swift */; };
 		DDDA399442924D63B89C5AAF /* src/SafariDarkModeRefreshService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B4327AD4324833A7C6583A /* src/SafariDarkModeRefreshService.swift */; };
+		0CDC6BE5393C4D469F620F31 /* src/Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C32A526C9CF4B3DA9B26CB9 /* src/Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +31,17 @@
 		};
 /* End PBXCopyFilesBuildPhase section */
 
+/* Begin PBXResourcesBuildPhase section */
+		1EE223C782E9419FA0A9B785 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CDC6BE5393C4D469F620F31 /* src/Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0E9E063F3D4F404FB01A2D3F /* src/AppNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = src/AppNotifier.swift; sourceTree = "<group>"; };
 		11E6E6299D6842B5ABF41055 /* src/RoundedCornersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = src/RoundedCornersService.swift; sourceTree = "<group>"; };
@@ -40,6 +52,7 @@
 		BF0088EAD4F94C09B6EB898F /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		C2B1F7396AE34C45BFB093F0 /* TuningFork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuningFork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D79FC6D1EE8C47E9B1312C8E /* src/TuningForkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = src/TuningForkApp.swift; sourceTree = "<group>"; };
+		6C32A526C9CF4B3DA9B26CB9 /* src/Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = src/Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +103,7 @@
 				2C3834B99D7C482EB89B6614 /* src/NaiveProxyService.swift */,
 				0E9E063F3D4F404FB01A2D3F /* src/AppNotifier.swift */,
 				6CB9406A8364487F9453582F /* src/naive */,
+				6C32A526C9CF4B3DA9B26CB9 /* src/Assets.xcassets */,
 			);
 			name = TuningFork;
 			sourceTree = "<group>";
@@ -104,6 +118,7 @@
 				F8AA285E7D6B4500ACE244CC /* Sources */,
 				0C7FDEE8B3F74FDC9AD20901 /* Frameworks */,
 				B3B4E41DF4044CDE8266A3C6 /* CopyFiles */,
+				1EE223C782E9419FA0A9B785 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -226,6 +241,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -242,7 +258,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = art.anjing.TuningFork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -254,6 +270,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -270,7 +287,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = art.anjing.TuningFork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
