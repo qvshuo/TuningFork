@@ -10,7 +10,7 @@
 
 - `Rounded Corners`：屏幕圆角效果
 - `Refresh Safari Tabs on Dark Mode`：系统切换到深色模式时自动刷新所有 Safari 标签页
-- `Start Proxy`：一键启动 NaïveProxy 代理
+- `Start Proxy`：一键启动 [NaïveProxy](https://github.com/klzgrad/naiveproxy) 代理
 
 ## Default Behavior
 
