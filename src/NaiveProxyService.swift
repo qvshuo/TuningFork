@@ -1,39 +1,6 @@
-import AppKit
 import Foundation
-import UserNotifications
 
-final class AppNotifier {
-    static let shared = AppNotifier()
-
-    private var hasRequestedAuthorization = false
-
-    private init() {}
-
-    func requestAuthorizationIfNeeded() {
-        guard !hasRequestedAuthorization else { return }
-        hasRequestedAuthorization = true
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { _, _ in }
-    }
-
-    func notify(title: String, body: String) {
-        requestAuthorizationIfNeeded()
-
-        let content = UNMutableNotificationContent()
-        content.title = title
-        content.body = body.isEmpty ? "Unknown error." : body
-        content.sound = .default
-
-        let request = UNNotificationRequest(
-            identifier: UUID().uuidString,
-            content: content,
-            trigger: nil
-        )
-
-        UNUserNotificationCenter.current().add(request)
-    }
-}
-
-final class NaiveProxyService {
+@MainActor final class NaiveProxyService {
     private let configPath = ("~/.config/naiveproxy/config.json" as NSString).expandingTildeInPath
     var onRunningStateChange: ((Bool) -> Void)?
 
@@ -46,7 +13,10 @@ final class NaiveProxyService {
     private(set) var isRunning = false
 
     func start() -> Bool {
-        guard process == nil else { return true }
+        if let process {
+            if process.isRunning { return true }
+            teardownProcess()
+        }
 
         let fileManager = FileManager.default
         guard fileManager.fileExists(atPath: configPath) else {
@@ -75,7 +45,9 @@ final class NaiveProxyService {
         process.standardOutput = stdoutPipe
         process.standardError = stderrPipe
         process.terminationHandler = { [weak self] process in
-            self?.handleTermination(process)
+            Task { @MainActor [weak self] in
+                self?.handleTermination(process)
+            }
         }
 
         installReadHandler(for: stdoutPipe)
@@ -96,38 +68,39 @@ final class NaiveProxyService {
         guard let process else { return }
         isStopping = true
         isRunning = false
+        onRunningStateChange?(false)
 
         if process.isRunning {
             process.terminate()
+        } else {
+            teardownProcess()
         }
-
-        if process.isRunning {
-            process.waitUntilExit()
-        }
-
-        teardownProcess()
     }
 
     private func installReadHandler(for pipe: Pipe) {
         pipe.fileHandleForReading.readabilityHandler = { [weak self] handle in
             let data = handle.availableData
             guard !data.isEmpty, let text = String(data: data, encoding: .utf8) else { return }
-            self?.capturedOutput.append(text)
+            Task { @MainActor [weak self] in
+                self?.capturedOutput.append(text)
+            }
         }
     }
 
     private func handleTermination(_ process: Process) {
+        let wasStopping = isStopping
         let exitOutput = capturedOutput.trimmingCharacters(in: .whitespacesAndNewlines)
-        let shouldNotify = !isStopping && process.terminationStatus != 0
+        let shouldNotify = !wasStopping && process.terminationStatus != 0
 
-        DispatchQueue.main.async { [weak self] in
-            guard let self else { return }
-            self.isRunning = false
-            self.teardownProcess()
-            self.onRunningStateChange?(false)
-            if shouldNotify {
-                self.notify(exitOutput)
-            }
+        isRunning = false
+        teardownProcess()
+
+        if !wasStopping {
+            onRunningStateChange?(false)
+        }
+
+        if shouldNotify {
+            notify(exitOutput)
         }
     }
 
@@ -142,8 +115,6 @@ final class NaiveProxyService {
     }
 
     private func notify(_ body: String) {
-        DispatchQueue.main.async {
-            AppNotifier.shared.notify(title: "TuningFork", body: body)
-        }
+        AppNotifier.shared.notify(title: "TuningFork", body: body)
     }
 }

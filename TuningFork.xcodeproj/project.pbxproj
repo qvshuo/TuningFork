@@ -1,0 +1,362 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17ED9E74F69D450593BEB39D /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0088EAD4F94C09B6EB898F /* UserNotifications.framework */; };
+		57ADB121DACD4462A359B357 /* src/AppNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9E063F3D4F404FB01A2D3F /* src/AppNotifier.swift */; };
+		78DFECEE264448E3B36AF4F6 /* src/NaiveProxyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3834B99D7C482EB89B6614 /* src/NaiveProxyService.swift */; };
+		A5DA86C2AEE94BBA8C66D3E2 /* src/naive in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6CB9406A8364487F9453582F /* src/naive */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE265167AD494D438726CD6C /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B5926471E4B12A00D6408 /* SwiftUI.framework */; };
+		CCBA44FEEDAB4BC4B6179EE6 /* src/TuningForkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FC6D1EE8C47E9B1312C8E /* src/TuningForkApp.swift */; };
+		CE3E6923CC494D84B6D6BD00 /* src/RoundedCornersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6E6299D6842B5ABF41055 /* src/RoundedCornersService.swift */; };
+		DDDA399442924D63B89C5AAF /* src/SafariDarkModeRefreshService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B4327AD4324833A7C6583A /* src/SafariDarkModeRefreshService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B3B4E41DF4044CDE8266A3C6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				A5DA86C2AEE94BBA8C66D3E2 /* src/naive in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0E9E063F3D4F404FB01A2D3F /* src/AppNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = src/AppNotifier.swift; sourceTree = "<group>"; };
+		11E6E6299D6842B5ABF41055 /* src/RoundedCornersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = src/RoundedCornersService.swift; sourceTree = "<group>"; };
+		27B4327AD4324833A7C6583A /* src/SafariDarkModeRefreshService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = src/SafariDarkModeRefreshService.swift; sourceTree = "<group>"; };
+		2C3834B99D7C482EB89B6614 /* src/NaiveProxyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = src/NaiveProxyService.swift; sourceTree = "<group>"; };
+		546B5926471E4B12A00D6408 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		6CB9406A8364487F9453582F /* src/naive */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = src/naive; sourceTree = "<group>"; };
+		BF0088EAD4F94C09B6EB898F /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		C2B1F7396AE34C45BFB093F0 /* TuningFork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuningFork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D79FC6D1EE8C47E9B1312C8E /* src/TuningForkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = src/TuningForkApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C7FDEE8B3F74FDC9AD20901 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE265167AD494D438726CD6C /* SwiftUI.framework in Frameworks */,
+				17ED9E74F69D450593BEB39D /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C207B733B084608A8FF7EC6 = {
+			isa = PBXGroup;
+			children = (
+				E57F9AA6797A4F0483901959 /* TuningFork */,
+				D21D9C3C39D14005A26FC552 /* Frameworks */,
+				2764002560254534848EE630 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2764002560254534848EE630 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2B1F7396AE34C45BFB093F0 /* TuningFork.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D21D9C3C39D14005A26FC552 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				546B5926471E4B12A00D6408 /* SwiftUI.framework */,
+				BF0088EAD4F94C09B6EB898F /* UserNotifications.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E57F9AA6797A4F0483901959 /* TuningFork */ = {
+			isa = PBXGroup;
+			children = (
+				D79FC6D1EE8C47E9B1312C8E /* src/TuningForkApp.swift */,
+				11E6E6299D6842B5ABF41055 /* src/RoundedCornersService.swift */,
+				27B4327AD4324833A7C6583A /* src/SafariDarkModeRefreshService.swift */,
+				2C3834B99D7C482EB89B6614 /* src/NaiveProxyService.swift */,
+				0E9E063F3D4F404FB01A2D3F /* src/AppNotifier.swift */,
+				6CB9406A8364487F9453582F /* src/naive */,
+			);
+			name = TuningFork;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		81C3E824CDDF4DE2BADC8D68 /* TuningFork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 468BB97611244F0995EBD0FC /* Build configuration list for PBXNativeTarget "TuningFork" */;
+			buildPhases = (
+				F8AA285E7D6B4500ACE244CC /* Sources */,
+				0C7FDEE8B3F74FDC9AD20901 /* Frameworks */,
+				B3B4E41DF4044CDE8266A3C6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TuningFork;
+			productName = TuningFork;
+			productReference = C2B1F7396AE34C45BFB093F0 /* TuningFork.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42AEAE1072AE4C1189862786 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2640;
+			};
+			buildConfigurationList = DD0E9398A96F4FC0B491D5E0 /* Build configuration list for PBXProject "TuningFork" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0C207B733B084608A8FF7EC6;
+			productRefGroup = 2764002560254534848EE630 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				81C3E824CDDF4DE2BADC8D68 /* TuningFork */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8AA285E7D6B4500ACE244CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCBA44FEEDAB4BC4B6179EE6 /* src/TuningForkApp.swift in Sources */,
+				CE3E6923CC494D84B6D6BD00 /* src/RoundedCornersService.swift in Sources */,
+				DDDA399442924D63B89C5AAF /* src/SafariDarkModeRefreshService.swift in Sources */,
+				78DFECEE264448E3B36AF4F6 /* src/NaiveProxyService.swift in Sources */,
+				57ADB121DACD4462A359B357 /* src/AppNotifier.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1CB45717EECE4057B1426CBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		28469691DD6F4030913BB2CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = TuningFork;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "TuningFork needs automation permission to refresh Safari tabs after macOS switches to Dark Mode.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = art.anjing.TuningFork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		84BB1FC128884ED5B23BDC50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = TuningFork;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "TuningFork needs automation permission to refresh Safari tabs after macOS switches to Dark Mode.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = art.anjing.TuningFork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		D7057B3918ED45E8BFE02164 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		468BB97611244F0995EBD0FC /* Build configuration list for PBXNativeTarget "TuningFork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28469691DD6F4030913BB2CB /* Debug */,
+				84BB1FC128884ED5B23BDC50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD0E9398A96F4FC0B491D5E0 /* Build configuration list for PBXProject "TuningFork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CB45717EECE4057B1426CBB /* Debug */,
+				D7057B3918ED45E8BFE02164 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 42AEAE1072AE4C1189862786 /* Project object */;
+}

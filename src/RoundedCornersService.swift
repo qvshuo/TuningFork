@@ -41,7 +41,7 @@ final class CornerMaskView: NSView {
     required init?(coder: NSCoder) { fatalError() }
 }
 
-final class RoundedCornersService {
+@MainActor final class RoundedCornersService {
     static let cornerRadius: CGFloat = 20
 
     private var windows: [NSWindow] = []
@@ -51,10 +51,19 @@ final class RoundedCornersService {
 
     func start() {
         guard !isRunning else { return }
+        if let screenObserver {
+            NotificationCenter.default.removeObserver(screenObserver)
+        }
         screenObserver = NotificationCenter.default.addObserver(
             forName: NSApplication.didChangeScreenParametersNotification,
             object: nil, queue: .main
-        ) { [weak self] _ in self?.rebuildOverlays() }
+        ) { [weak self] _ in
+                // queue: .main delivers on main thread, but the closure is @Sendable;
+                // Task { @MainActor } bridges into the actor-isolated context.
+                Task { @MainActor [weak self] in
+                self?.rebuildOverlays()
+            }
+        }
 
         if windows.isEmpty
             || screenConfigurationSignature != Self.currentScreenConfigurationSignature()

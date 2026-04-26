@@ -2,6 +2,7 @@ import SwiftUI
 import Observation
 import AppKit
 
+@MainActor
 @Observable
 final class AppState {
     var isRoundedCornersEnabled = false
@@ -20,7 +21,6 @@ final class AppState {
     }
 
     func startDefaults() {
-        guard !isRoundedCornersEnabled, !isSafariDarkModeRefreshEnabled, !isNaiveProxyEnabled else { return }
         setRoundedCorners(enabled: true)
         setSafariDarkModeRefresh(enabled: true)
     }
@@ -69,7 +69,6 @@ final class AppState {
             isNaiveProxyEnabled = naiveProxy.start()
         } else {
             naiveProxy.stop()
-            isNaiveProxyEnabled = false
         }
     }
 }
@@ -95,7 +94,7 @@ struct TuningForkApp: App {
             }
 
             Button(action: state.toggleNaiveProxy) {
-                menuTitle("NaïveProxy", isEnabled: state.isNaiveProxyEnabled)
+                menuTitle("Start Proxy", isEnabled: state.isNaiveProxyEnabled)
             }
 
             Divider()

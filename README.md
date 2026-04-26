@@ -5,38 +5,36 @@
 ## Features
 
 - `Rounded Corners`：屏幕圆角效果
-- `Refresh Safari Tabs on Dark Mode`：系统切换到深色模式时刷新 Safari 标签页
-- `NaïveProxy`：一键启动代理
-
-应用无 Dock 图标，不弹出主窗口。
+- `Refresh Safari Tabs on Dark Mode`：系统切换到深色模式时自动刷新所有 Safari 标签页
+- `Start Proxy`：一键启动代理
 
 ## Default Behavior
 
-- `Rounded Corners` 与 `Refresh Safari Tabs on Dark Mode` 在启动时自动启用
-- `NaïveProxy` 默认关闭，需手动开启
+- `Rounded Corners` 与 `Refresh Safari Tabs on Dark Mode` 在应用启动时默认启用
+- `Start Proxy` 默认关闭，需手动开启
 
-## Compatibility
+## Installation
+
+### 下载最新预编译版本
+
+从 [GitHub Releases](https://github.com/qvshuo/TuningFork/releases/latest) 下载预编译应用，解压后移至 **Applications** 文件夹。
+
+首次启动前运行：
+
+```bash
+xattr -cr "/Applications/TuningFork.app"
+```
+
+### 从源代码构建
+
+在 Xcode 中打开 `TuningFork.xcodeproj` 即可构建。
+
+## Requirements
 
 - macOS 26+
 - Apple Silicon
 
-## Build
-
-```bash
-./build.sh
-```
-
-构建产物位于 `./build/TuningFork.app`。
-
-## Launch
-
-```bash
-open ./build/TuningFork.app
-```
-
-## Requirements
-
-使用 `NaïveProxy` 前需准备配置文件：
+使用 `Start Proxy` 前需准备配置文件：
 
 ```bash
 ~/.config/naiveproxy/config.json
@@ -47,3 +45,7 @@ open ./build/TuningFork.app
 ## Permissions
 
 首次使用 Safari 刷新功能时，macOS 可能请求自动化权限。
+
+## License
+
+MIT
