@@ -6,7 +6,7 @@
 
 - `Rounded Corners`：屏幕圆角效果
 - `Refresh Safari Tabs on Dark Mode`：系统切换到深色模式时自动刷新所有 Safari 标签页
-- `Start Proxy`：一键启动代理
+- `Start Proxy`：一键启动 NaïveProxy 代理
 
 ## Default Behavior
 
@@ -40,11 +40,9 @@ xattr -cr "/Applications/TuningFork.app"
 ~/.config/naiveproxy/config.json
 ```
 
-配置文件缺失或代理启动失败时，将通过系统通知提示。
-
 ## Permissions
 
-首次使用 Safari 刷新功能时，macOS 可能请求自动化权限。
+首次使用 Safari 自动刷新功能时，macOS 可能请求自动化权限。
 
 ## License
 
