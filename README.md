@@ -42,7 +42,9 @@ xattr -cr "/Applications/TuningFork.app"
 
 ## Permissions
 
-首次使用 Safari 自动刷新功能时，macOS 可能请求自动化权限。
+首次使用 Safari 自动刷新功能时，macOS 将请求控制 Safari 的自动化权限，请在系统设置中允许。
+
+同时，请先在 Safari **设置** → **高级**中启用**显示网页开发者功能**，再在**开发者**选项卡中启用**允许Apple 事件中的 JavaScript**。
 
 ## License
 
