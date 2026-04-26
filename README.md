@@ -1,3 +1,7 @@
+<p align="center">
+  <img width="128" height="128" src="src/Assets.xcassets/AppIcon.appiconset/icon_512x512@2x.png">
+</p>
+
 # TuningFork
 
 一个 macOS 菜单栏工具。
