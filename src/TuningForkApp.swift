@@ -7,18 +7,9 @@ import AppKit
 final class AppState {
     var isRoundedCornersEnabled = false
     var isSafariDarkModeRefreshEnabled = false
-    var isNaiveProxyEnabled = false
 
     private let roundedCorners = RoundedCornersService()
     private let safariDarkModeRefresh = SafariDarkModeRefreshService()
-    @ObservationIgnored private let naiveProxy: NaiveProxyService
-
-    init() {
-        naiveProxy = NaiveProxyService()
-        naiveProxy.onRunningStateChange = { [weak self] isRunning in
-            self?.isNaiveProxyEnabled = isRunning
-        }
-    }
 
     func startDefaults() {
         setRoundedCorners(enabled: true)
@@ -33,14 +24,9 @@ final class AppState {
         setSafariDarkModeRefresh(enabled: !isSafariDarkModeRefreshEnabled)
     }
 
-    func toggleNaiveProxy() {
-        setNaiveProxy(enabled: !isNaiveProxyEnabled)
-    }
-
     func stopAll() {
         setRoundedCorners(enabled: false)
         setSafariDarkModeRefresh(enabled: false)
-        setNaiveProxy(enabled: false)
     }
 
     private func setRoundedCorners(enabled: Bool) {
@@ -62,15 +48,6 @@ final class AppState {
         }
         isSafariDarkModeRefreshEnabled = enabled
     }
-
-    private func setNaiveProxy(enabled: Bool) {
-        guard isNaiveProxyEnabled != enabled else { return }
-        if enabled {
-            isNaiveProxyEnabled = naiveProxy.start()
-        } else {
-            naiveProxy.stop()
-        }
-    }
 }
 
 @main
@@ -91,10 +68,6 @@ struct TuningForkApp: App {
 
             Button(action: state.toggleSafariDarkModeRefresh) {
                 menuTitle("Refresh Safari Tabs on Dark Mode", isEnabled: state.isSafariDarkModeRefreshEnabled)
-            }
-
-            Button(action: state.toggleNaiveProxy) {
-                menuTitle("Start Proxy", isEnabled: state.isNaiveProxyEnabled)
             }
 
             Divider()

@@ -10,12 +10,10 @@
 
 - `Rounded Corners`：屏幕圆角效果
 - `Refresh Safari Tabs on Dark Mode`：系统切换到深色模式时自动刷新所有 Safari 标签页
-- `Start Proxy`：一键启动 [NaïveProxy](https://github.com/klzgrad/naiveproxy) 代理
 
 ## Default Behavior
 
 - `Rounded Corners` 与 `Refresh Safari Tabs on Dark Mode` 在应用启动时默认启用
-- `Start Proxy` 默认关闭，需手动开启
 
 ## Installation
 
@@ -37,12 +35,6 @@ xattr -cr "/Applications/TuningFork.app"
 
 - macOS 26+
 - Apple Silicon
-
-使用 `Start Proxy` 前需准备配置文件：
-
-```bash
-~/.config/naiveproxy/config.json
-```
 
 ## Permissions
 

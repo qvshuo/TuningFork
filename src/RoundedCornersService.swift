@@ -58,9 +58,9 @@ final class CornerMaskView: NSView {
             forName: NSApplication.didChangeScreenParametersNotification,
             object: nil, queue: .main
         ) { [weak self] _ in
-                // queue: .main delivers on main thread, but the closure is @Sendable;
-                // Task { @MainActor } bridges into the actor-isolated context.
-                Task { @MainActor [weak self] in
+            // queue: .main delivers on main thread, but the closure is @Sendable;
+            // Task { @MainActor } bridges into the actor-isolated context.
+            Task { @MainActor [weak self] in
                 self?.rebuildOverlays()
             }
         }

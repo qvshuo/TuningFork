@@ -7,29 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17ED9E74F69D450593BEB39D /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF0088EAD4F94C09B6EB898F /* UserNotifications.framework */; };
-		57ADB121DACD4462A359B357 /* src/AppNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9E063F3D4F404FB01A2D3F /* src/AppNotifier.swift */; };
-		78DFECEE264448E3B36AF4F6 /* src/NaiveProxyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3834B99D7C482EB89B6614 /* src/NaiveProxyService.swift */; };
-		A5DA86C2AEE94BBA8C66D3E2 /* src/naive in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6CB9406A8364487F9453582F /* src/naive */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		AE265167AD494D438726CD6C /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B5926471E4B12A00D6408 /* SwiftUI.framework */; };
 		CCBA44FEEDAB4BC4B6179EE6 /* src/TuningForkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79FC6D1EE8C47E9B1312C8E /* src/TuningForkApp.swift */; };
 		CE3E6923CC494D84B6D6BD00 /* src/RoundedCornersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6E6299D6842B5ABF41055 /* src/RoundedCornersService.swift */; };
 		DDDA399442924D63B89C5AAF /* src/SafariDarkModeRefreshService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B4327AD4324833A7C6583A /* src/SafariDarkModeRefreshService.swift */; };
 		0CDC6BE5393C4D469F620F31 /* src/Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C32A526C9CF4B3DA9B26CB9 /* src/Assets.xcassets */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		B3B4E41DF4044CDE8266A3C6 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 6;
-			files = (
-				A5DA86C2AEE94BBA8C66D3E2 /* src/naive in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1EE223C782E9419FA0A9B785 /* Resources */ = {
@@ -43,13 +26,9 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0E9E063F3D4F404FB01A2D3F /* src/AppNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = src/AppNotifier.swift; sourceTree = "<group>"; };
 		11E6E6299D6842B5ABF41055 /* src/RoundedCornersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = src/RoundedCornersService.swift; sourceTree = "<group>"; };
 		27B4327AD4324833A7C6583A /* src/SafariDarkModeRefreshService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = src/SafariDarkModeRefreshService.swift; sourceTree = "<group>"; };
-		2C3834B99D7C482EB89B6614 /* src/NaiveProxyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = src/NaiveProxyService.swift; sourceTree = "<group>"; };
 		546B5926471E4B12A00D6408 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		6CB9406A8364487F9453582F /* src/naive */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = src/naive; sourceTree = "<group>"; };
-		BF0088EAD4F94C09B6EB898F /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		C2B1F7396AE34C45BFB093F0 /* TuningFork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuningFork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D79FC6D1EE8C47E9B1312C8E /* src/TuningForkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = src/TuningForkApp.swift; sourceTree = "<group>"; };
 		6C32A526C9CF4B3DA9B26CB9 /* src/Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = src/Assets.xcassets; sourceTree = "<group>"; };
@@ -61,7 +40,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE265167AD494D438726CD6C /* SwiftUI.framework in Frameworks */,
-				17ED9E74F69D450593BEB39D /* UserNotifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				546B5926471E4B12A00D6408 /* SwiftUI.framework */,
-				BF0088EAD4F94C09B6EB898F /* UserNotifications.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -100,9 +77,6 @@
 				D79FC6D1EE8C47E9B1312C8E /* src/TuningForkApp.swift */,
 				11E6E6299D6842B5ABF41055 /* src/RoundedCornersService.swift */,
 				27B4327AD4324833A7C6583A /* src/SafariDarkModeRefreshService.swift */,
-				2C3834B99D7C482EB89B6614 /* src/NaiveProxyService.swift */,
-				0E9E063F3D4F404FB01A2D3F /* src/AppNotifier.swift */,
-				6CB9406A8364487F9453582F /* src/naive */,
 				6C32A526C9CF4B3DA9B26CB9 /* src/Assets.xcassets */,
 			);
 			name = TuningFork;
@@ -117,7 +91,6 @@
 			buildPhases = (
 				F8AA285E7D6B4500ACE244CC /* Sources */,
 				0C7FDEE8B3F74FDC9AD20901 /* Frameworks */,
-				B3B4E41DF4044CDE8266A3C6 /* CopyFiles */,
 				1EE223C782E9419FA0A9B785 /* Resources */,
 			);
 			buildRules = (
@@ -164,8 +137,6 @@
 				CCBA44FEEDAB4BC4B6179EE6 /* src/TuningForkApp.swift in Sources */,
 				CE3E6923CC494D84B6D6BD00 /* src/RoundedCornersService.swift in Sources */,
 				DDDA399442924D63B89C5AAF /* src/SafariDarkModeRefreshService.swift in Sources */,
-				78DFECEE264448E3B36AF4F6 /* src/NaiveProxyService.swift in Sources */,
-				57ADB121DACD4462A359B357 /* src/AppNotifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +229,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = art.anjing.TuningFork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -287,7 +258,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = art.anjing.TuningFork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
